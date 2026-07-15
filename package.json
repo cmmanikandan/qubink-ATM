@@ -16,7 +16,7 @@
     "build:frontend": "tsc -b && vite build",
     "build": "npm run build:electron && npm run build:frontend",
     "package": "node scripts/build-isolated.js",
-    "release": "npm run build && electron-builder build --win --publish always --config.directories.output=C:/Users/USER/qubink-build && powershell -Command \"New-Item -ItemType Directory -Force -Path './dist-package/' | Out-Null; Copy-Item -Path 'C:/Users/USER/qubink-build/*.exe' -Destination './dist-package/' -Force; Write-Host 'Release Installer copied to dist-package/'\"",
+    "release": "npm run build && electron-builder build --win --publish never --config.directories.output=C:/Users/USER/qubink-build && powershell -Command \"New-Item -ItemType Directory -Force -Path './dist-package/' | Out-Null; Copy-Item -Path 'C:/Users/USER/qubink-build/*.exe' -Destination './dist-package/' -Force; Write-Host 'Release Installer copied to dist-package/'\"",
     "lint": "oxlint",
     "preview": "vite preview"
   },
