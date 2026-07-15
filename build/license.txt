@@ -1,0 +1,56 @@
+QUBINK NEXUS™ MACHINE CONTROLLER
+END USER LICENSE AGREEMENT
+
+Version 1.0.0 | Effective Date: 2025
+
+IMPORTANT — READ CAREFULLY BEFORE INSTALLING THIS SOFTWARE.
+
+This End User License Agreement ("Agreement") is a legal agreement between you
+("Licensee") and Qubink ("Licensor") for the use of Qubink Nexus™ Machine
+Controller software ("Software").
+
+BY CLICKING "I AGREE" OR INSTALLING THE SOFTWARE, YOU AGREE TO BE BOUND BY
+THE TERMS OF THIS AGREEMENT.
+
+1. LICENSE GRANT
+   Licensor grants Licensee a non-exclusive, non-transferable, limited license
+   to install and use the Software solely on machines owned or controlled by
+   the Licensee for the purpose of operating Qubink Smart Print ATM terminals.
+
+2. RESTRICTIONS
+   Licensee shall not:
+   (a) Copy, modify, or distribute the Software;
+   (b) Reverse engineer, decompile, or disassemble the Software;
+   (c) Transfer, sublicense, or resell the Software;
+   (d) Remove proprietary notices from the Software.
+
+3. OWNERSHIP
+   The Software is licensed, not sold. Licensor retains all intellectual
+   property rights in the Software.
+
+4. DATA & PRIVACY
+   The Software connects to cloud services (Supabase, Cloudinary) to manage
+   print jobs and machine telemetry. Licensee is responsible for compliance
+   with applicable data protection laws.
+
+5. UPDATES
+   Licensor may provide updates to the Software. Updates may be automatic.
+   Licensor reserves the right to change features in updates.
+
+6. TERMINATION
+   This Agreement terminates automatically if Licensee breaches any term.
+   Upon termination, Licensee must destroy all copies of the Software.
+
+7. DISCLAIMER OF WARRANTIES
+   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. LICENSOR
+   DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED.
+
+8. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL
+   OR CONSEQUENTIAL DAMAGES ARISING FROM USE OF THE SOFTWARE.
+
+9. GOVERNING LAW
+   This Agreement is governed by the laws of India.
+
+Copyright © 2025 Qubink. All rights reserved.
+Qubink Nexus™ is a trademark of Qubink.

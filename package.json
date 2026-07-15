@@ -1,0 +1,98 @@
+{
+  "name": "qubink-controller",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Qubink Nexus Smart Print ATM Machine Controller",
+  "author": {
+    "name": "Qubink Development Team",
+    "email": "dev@qubink.in",
+    "url": "https://qubink.in"
+  },
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "build:electron": "node scripts/build-electron.js",
+    "build:frontend": "tsc -b && vite build",
+    "build": "npm run build:electron && npm run build:frontend",
+    "package": "node scripts/build-isolated.js",
+    "release": "npm run build && electron-builder build --win --publish always --config.directories.output=C:/Users/USER/qubink-build && powershell -Command \"New-Item -ItemType Directory -Force -Path './dist-package/' | Out-Null; Copy-Item -Path 'C:/Users/USER/qubink-build/*.exe' -Destination './dist-package/' -Force; Write-Host 'Release Installer copied to dist-package/'\"",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.109.0",
+    "canvas-confetti": "^1.9.4",
+    "electron-updater": "^6.6.2",
+    "firebase": "^12.16.0",
+    "lucide-react": "^1.24.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "autoprefixer": "^10.5.3",
+    "electron": "^41.7.1",
+    "electron-builder": "^26.15.3",
+    "oxlint": "^1.71.0",
+    "postcss": "^8.5.19",
+    "tailwindcss": "^4.3.2",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1"
+  },
+  "build": {
+    "appId": "com.qubink.nexus",
+    "productName": "Qubink Nexus",
+    "copyright": "Copyright © 2025 Qubink",
+    "directories": {
+      "output": "dist-package",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json",
+      "logo.png"
+    ],
+    "extraResources": [
+      {
+        "from": ".env.local",
+        "to": ".env.local",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Qubink Nexus",
+      "runAfterFinish": true,
+      "include": "build/installer.nsh",
+      "license": "build/license.txt",
+      "deleteAppDataOnUninstall": false
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "qubink",
+        "repo": "nexus-releases",
+        "releaseType": "release"
+      }
+    ]
+  }
+}
